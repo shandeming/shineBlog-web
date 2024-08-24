@@ -1,15 +1,18 @@
-import React from 'react';
-import { Post } from '@/services/PostService';
+import React from "react";
+import { Post } from "@/services/PostService";
+import Link from "next/link";
 
-interface PostListProps {
+type PostListProps = {
   posts: Post[];
-}
+};
 
 const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
     <ul>
-      {posts.map(post => (
-        <li key={post.id}>{post.title}</li>
+      {posts.map((post) => (
+        <li key={post.id}>
+          <Link href={`/post/${post.id}`}>{post.title}</Link>
+        </li>
       ))}
     </ul>
   );
