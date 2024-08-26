@@ -22,9 +22,9 @@ const Post = ({ params }: Props) => {
     <body>
       {post ? (
         <>
-        <header className="text-3xl px-10 py-6">
-          <h1>{post.title}</h1>
-          <p>{new Date(post.date).toLocaleDateString()}</p>
+        <header className="px-10 py-24">
+          <h1 className="text-3xl">{post.title}</h1>
+          <aside className="pt-3">{new Date(post.date).toLocaleDateString()}</aside>
         </header>
         <main>
           <p>{post.content}</p>
