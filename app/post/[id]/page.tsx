@@ -19,19 +19,22 @@ const Post = ({ params }: Props) => {
   }, [params.id]);
 
   return (
-    <div>
+    <body>
       {post ? (
-        <div>
-          <h1>Post:{post.id}</h1>
-          <h2>{post.title}</h2>
+        <>
+        <header className="text-3xl px-10 py-6">
+          <h1>{post.title}</h1>
+          <p>{new Date(post.date).toLocaleDateString()}</p>
+        </header>
+        <main>
           <p>{post.content}</p>
           <p>{post.author}</p>
-          <p>{new Date(post.date).toLocaleDateString()}</p>
-        </div>
+        </main>
+        </>
       ) : (
         <p>Loading...</p>
       )}
-    </div>
+    </body>
   );
 };
 
