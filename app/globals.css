@@ -4,6 +4,7 @@
 
 * {
     @apply text-center;
+    margin: auto;
   }
 
 html {

@@ -22,14 +22,15 @@ const Post = ({ params }: Props) => {
     <body>
       {post ? (
         <>
-        <header className="px-10 py-24">
-          <h1 className="text-3xl">{post.title}</h1>
-          <aside className="pt-3">{new Date(post.date).toLocaleDateString()}</aside>
-        </header>
-        <main>
-          <p>{post.content}</p>
-          <p>{post.author}</p>
-        </main>
+          <div className="px-5">
+            <header className="py-24 border-b-[1px]">
+              <h1 className="text-5xl font-bold">{post.title}</h1>
+              <aside className="pt-3">{new Date(post.date).toLocaleDateString()}</aside>
+            </header>
+          </div>
+          <article className="mt-10">
+            <p>{post.content}</p>
+          </article>
         </>
       ) : (
         <p>Loading...</p>

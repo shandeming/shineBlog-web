@@ -17,7 +17,9 @@ export default function Page() {
   return (
     <div>
       <h1>Home</h1>
-      <PostList posts={posts} />
+      <section>
+        <PostList posts={posts} />
+      </section>
     </div>
   );
 }
