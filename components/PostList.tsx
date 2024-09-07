@@ -7,6 +7,9 @@ type PostListProps = {
 };
 
 const PostList: React.FC<PostListProps> = ({ posts }) => {
+  if (!Array.isArray(posts)) {
+    return <p>No posts available</p>;
+  }
   return (
     <ul>
       {posts.map((post) => (
